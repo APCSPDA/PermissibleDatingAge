@@ -1,5 +1,6 @@
 package com.mrjaffesclass.apcs.mvc.template;
 import com.mrjaffesclass.apcs.messenger.*;
+import java.awt.Color;
 
 /**
  * 
@@ -40,7 +41,7 @@ public class Controller implements MessageHandler {
     View view = new View(mvcMessaging);    // This creates our view
     view.init();
     view.setVisible(true);
-
+    
     // Create the model
     Model model = new Model(mvcMessaging);  // This creates our model
     model.init();

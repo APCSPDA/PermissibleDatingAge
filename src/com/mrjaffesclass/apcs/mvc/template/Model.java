@@ -12,8 +12,8 @@ public class Model implements MessageHandler {
   // Messaging system for the MVC
   private final Messenger mvcMessaging;
   
-  private double youngest;
-  private double oldest;
+  private int youngest;
+  private int oldest;
   // Model's data variables
 
   /**
@@ -44,8 +44,10 @@ public class Model implements MessageHandler {
     MessagePayload payload = (MessagePayload)messagePayload;
     int age = payload.getAge();
     double age1 = age;
-    youngest = ((age1 / 2) + 7);
-    oldest = ((age1-7) * 2);
+    double youngest1 = ((age1 / 2) + 7);
+    double oldest1 = ((age1-7) * 2);
+    youngest = (int) Math.round(youngest1);
+    oldest = (int)Math.round(oldest1);
     mvcMessaging.notify("model:youngestAge",youngest,true);
     mvcMessaging.notify("model:oldestAge",oldest,true);
   }

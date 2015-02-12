@@ -48,12 +48,12 @@ public class View extends javax.swing.JFrame implements MessageHandler
     if(messageName.equals("model:youngestAge"))
     {
         String a = messagePayload.toString();
-        jLabel4.setText("You should date someone older than " + a);
+        jLabel4.setText("You should date someone who is " + a + " or older");
     }
     if(messageName.equals("model:oldestAge"))
     {
         String b = messagePayload.toString();
-        jLabel2.setText("and younger than " + b);
+        jLabel2.setText("and " + b + " or younger");
     }
     
   }
@@ -118,7 +118,7 @@ public class View extends javax.swing.JFrame implements MessageHandler
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5))
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,7 +134,7 @@ public class View extends javax.swing.JFrame implements MessageHandler
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         pack();
